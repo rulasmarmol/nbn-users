@@ -19,7 +19,7 @@ kubectl config use-context docker-for-desktop
 kubectl apply -f mongo-deployment.yaml
 ```
 
-### Service startup
+### Service startup
 ```
 kubectl apply -f mongo-service.yaml
 ```
@@ -54,7 +54,7 @@ docker build -t nbn-user:latest .
 kubectl apply -f deployment.yaml
 ```
 
-### Service startup
+### Service startup
 ```
 kubectl apply -f service.yaml
 ```
@@ -97,7 +97,7 @@ At this point everything is running and you can test the application on your bro
 kubectl exec -it mongodb-standalone-0 sh
 ```
 
-### Connect to the database 
+### Connect to the database 
 ```
 mongo mongodb://database:27017
 ```
@@ -107,7 +107,7 @@ mongo mongodb://database:27017
 use test
 ```
 
-### Fetch some ids
+### Fetch some ids
 ```
 db.user.find()
 ```
