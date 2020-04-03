@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nbn-user
+  labels: 
+    app: nbn-user
+spec:
+  containers:
+  - name: nbn-user
+    image: cmarmole/nbn-user:latest
+    ports:
+      - containerPort: 8080

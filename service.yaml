@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata: 
+    name: nbn-user-service
+spec: 
+    type: LoadBalancer
+    selector: 
+        app: nbn-user
+    ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

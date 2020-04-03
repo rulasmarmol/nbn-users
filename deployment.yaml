@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nbn-user-deployment
+  labels: 
+    app: nbn-user
+spec:
+  replicas: 10
+  selector: 
+    matchLabels: 
+      app: nbn-user
+  template:
+    metadata:  
+      labels: 
+        app: nbn-user
+    spec:
+      containers:
+        - name: nbn-user
+          image: cmarmole/nbn-user:latest
+          ports:
+            - containerPort: 8080
